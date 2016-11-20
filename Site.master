@@ -1,0 +1,160 @@
+﻿<%@ Master Language="VB" CodeFile="Site.master.vb" Inherits="SiteMaster" %>
+<%@ Register TagPrefix="ajax" Namespace="MagicAjax.UI.Controls" Assembly="MagicAjax" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+    <head id="Head1" runat="server">
+        <title>Untitled Page</title>
+        
+        <SCRIPT language=javascript>
+            <!--
+                var hinhnen;
+                var banner;
+                ////////////////////////////////////////////////////////////////////
+                ////////////////////////////////////////////////////////////////////
+                var htmltext="Quản lý giảng dạy tiểu học by Trung Hiếu - Minh Phương";	
+		        d=new Date();
+		        var sogiay=d.getHours()*3600+d.getMinutes()*60+d.getSeconds();
+        	
+		        function clock()
+		        {
+		            sogiay++;
+		            tam=sogiay;
+		            gio=(sogiay-sogiay % 3600)/3600;
+		            sogiay=sogiay-gio*3600;
+		            phut=(sogiay-sogiay%60) / 60;
+		            sogiay=sogiay-phut*60;
+		            giay=sogiay;
+                    
+                    htmltext=" Bây giờ là: " + (gio<10?'0'+gio:gio) + ":" + (phut<10?'0'+phut:phut) + ":" + (giay<10?'0'+giay:giay);			    
+                    divtime.innerHTML=htmltext;
+		            sogiay=tam;		    
+		            if (sogiay>86399)
+		            {
+			            sogiay=0;
+			        }
+		        }
+		        	
+		        function chaythoigian()
+		        {
+		            /////////////////////////////////////////////////////
+		            //divchay.innerHTML="<marquee>"+ htmltext +"</marquee>";
+                    /////////////////////////////////////////////////////
+		        }
+		        
+                function loadpage()
+                {                  
+                    clock();                 
+                    window.setInterval('clock()',1000);            
+                }                
+            -->
+	    </SCRIPT>       
+    </head>
+
+    <body style="clip: rect(0 0 auto auto);text-align:center;margin:0 0 0 0;" onload="loadpage()">
+    
+        <form id="form1" runat="server">
+    
+            <div style="text-align:left;vertical-align:top;margin:0 0 0 0;">
+     
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0"  frame="box" style="margin:0 0 0 0;">
+                        <tr>
+                            <td colspan="3" style="margin:0 0 0 0;" valign="top" align="left" >
+                            <center> <img src="../images/ban.jpg" style="width: 800px; height: 78px" /> </center>
+                            </td>
+                        </tr>
+                          
+                        <tr>
+                            <td id="header" colspan="3" background="../images/dark_blue_back_long.gif" style="margin:0 0 0 0;">
+                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                    <tr>
+                                        <td width="20%" style="height: 19px">
+                                            <a style="color:White" href="TrangChu.aspx">TRANG CHỦ</a>
+                                               &nbsp;&nbsp;&nbsp; 
+                                            <div id="divtime" style="color:White;"></div>
+                                        </td>
+                                        
+                                        <td style="height: 19px" >
+                                            <div id="divchay" style="color:White;">&nbsp;
+                                                <marquee>Quản lý giảng dạy tiểu học by Trung Hiếu - Minh Phương</marquee>
+                                            </div>
+                                        </td>
+                                    </tr>                                
+                                </table>                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right" colspan="3" style="margin: 0px;
+                                height: 19px">
+                                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Public/DangKy.aspx">Register</asp:HyperLink></td>
+                        </tr>
+                        
+                        <tr>                   
+                            <td valign="top" width="15%" align="left">                                                       
+                                <div id="div2"><br />
+                                    <asp:Menu ID="mnuSite" runat="server" BackColor="#0060AD" DynamicHorizontalOffset="2" ForeColor="White" StaticSubMenuIndent="10px" Width="155px">
+                                         <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                                         <DynamicHoverStyle BackColor="#f0f8ff" ForeColor="Blue" />
+                                         <DynamicMenuStyle BackColor="#0060AD" />
+                                         <StaticSelectedStyle BackColor="#5D7B9D" />
+                                         <DynamicSelectedStyle BackColor="#5D7B9D" />
+                                         <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                                         <StaticHoverStyle BackColor="#f0f8ff" ForeColor="Blue" />
+                                    </asp:Menu>                
+                                </div><br />                          
+                                
+                                <div id="divlogin" style="text-align:left;">
+                                     <table width="100%">
+                                        <tr>
+                                            <td align="left" >
+                                                <asp:Label ID="lblTenNguoiDung" runat="server" Text="Tên người dùng:"></asp:Label>
+                                                <asp:TextBox ID="txtTenNguoiDung" runat="server"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td align="left">
+                                                <asp:Label ID="lblMatKhau" runat="server" Text="Mật khẩu:" Width="94px"></asp:Label>
+                                                <asp:TextBox ID="txtMatKhau" runat="server" TextMode="Password" Width="147px"></asp:TextBox>
+                                            </td>                                      
+                                        </tr>                                  
+                                        
+                                        <tr>
+                                            <td align="left">
+                                                <asp:CheckBox runat="server" Text="Ghi nhớ ?" ID="chkNhoMatKhau" />
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td align="left">
+                                                <asp:Button ID="btnDangNhap" runat="server" Text="Đăng nhập" />
+                                            </td>
+                                        </tr>                                   
+                                        
+                                    </table>
+                                    
+                                </div>
+                                
+                                <div id="divlogout">
+                                    &nbsp;<asp:LinkButton ID="lblLogin" runat="server">Sign in</asp:LinkButton>
+                                </div><br />                           
+                                 
+                            </td>&nbsp;
+                            
+                            <td valign="top" style="width: 600px" align="center" >&nbsp;
+                                <center><asp:contentplaceholder id="ContentPlaceHolder1" runat="server" ></asp:contentplaceholder></center>
+                            </td>                                        
+                            
+                        </tr>             
+                               
+                    </table>              
+                
+            </div>
+            
+        </form>      
+     
+    </body>
+    
+</html>
