@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Menu Text="" Value="" NavigateUrl="#">
+  
+  <MenuItem Text="10" NavigateUrl="#" Value="">
+    <MenuItem Text="Toan 10" Value="T10"/>
+    <MenuItem Text="Vat Ly 10" Value="L10"/>
+    <MenuItem Text="Hoa Hoc 10" Value="HH10"/>
+    <MenuItem Text="Sinh Hoc 10" Value="Si10"/>
+    <MenuItem Text="Van Hoc 10" Value="V10"/>
+    <MenuItem Text="Lich Su 10" Value="S10"/>
+    <MenuItem Text="Dia Ly 10" Value="D10"/>
+    <MenuItem Text="Ngoai Ngu 10" Value="NN10"/>
+    <MenuItem Text="GDCD 10" Value="CD10"/>
+    <MenuItem Text="The Duc 10" Value="TD10"/>
+    <MenuItem Text="Ky Thuat 10" Value="KT10"/>
+    <MenuItem Text="Tin Hoc 10" Value="TH10"/>    
+  </MenuItem>
+
+  <MenuItem Text="11" NavigateUrl="#" Value="">
+    <MenuItem Text="Toan 11" Value="T11"/>
+    <MenuItem Text="Vat Ly 11" Value="L11"/>
+    <MenuItem Text="Hoa Hoc 11" Value="HH11"/>
+    <MenuItem Text="Sinh Hoc 11" Value="Si11"/>
+    <MenuItem Text="Van Hoc 11" Value="V11"/>
+    <MenuItem Text="Lich Su 11" Value="S11"/>
+    <MenuItem Text="Dia Ly 11" Value="D11"/>
+    <MenuItem Text="Ngoai Ngu 11" Value="NN11"/>
+    <MenuItem Text="GDCD 11" Value="CD11"/>
+    <MenuItem Text="The Duc 11" Value="TD11"/>
+    <MenuItem Text="Ky Thuat 11" Value="KT11"/>
+    <MenuItem Text="Tin Hoc 11" Value="TH11"/>
+  </MenuItem>
+  
+  <MenuItem Text="12" NavigateUrl="#" Value="">
+    <MenuItem Text="Toan 12" Value="T12"/>
+    <MenuItem Text="Vat Ly 12" Value="L12"/>
+    <MenuItem Text="Hoa Hoc 12" Value="HH12"/>
+    <MenuItem Text="Sinh Hoc 12" Value="Si12"/>
+    <MenuItem Text="Van Hoc 12" Value="V12"/>
+    <MenuItem Text="Lich Su 12" Value="S12"/>
+    <MenuItem Text="Dia Ly 12" Value="D12"/>
+    <MenuItem Text="Ngoai Ngu 12" Value="NN12"/>
+    <MenuItem Text="GDCD 12" Value="CD12"/>
+    <MenuItem Text="The Duc 12" Value="TD12"/>
+    <MenuItem Text="Ky Thuat 12" Value="KT12"/>  
+  </MenuItem>
+  
+</Menu>

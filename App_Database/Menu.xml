@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Menu Text="" Value="" NavigateUrl="#">
+	<MenuItem Text="Quản trị" NavigateUrl="#" Value="">
+		<MenuItem Text="Danh sách học sinh" NavigateUrl="Admin/DanhSachHocSinh.aspx" Value=""/>
+		<MenuItem Text="Thêm học sinh" NavigateUrl="Admin/ThemHocSinh.aspx" Value=""/>		
+		<MenuItem Text="Thêm lớp" NavigateUrl="Admin/ThemLopHoc.aspx" Value=""/>
+	</MenuItem>
+	
+	<MenuItem Text="Giáo viên" NavigateUrl="#" Value="">
+		<MenuItem Text="Tìm kiếm thông tin học sinh" NavigateUrl="GiaoVien/TimKiemHocSinh.aspx" Value=""/>
+    <MenuItem Text="Nhập điểm" NavigateUrl="GiaoVien/NhapDiem.aspx" Value="" />
+	</MenuItem>
+	
+	<MenuItem Text="Học sinh" NavigateUrl="#" Value="">
+		<MenuItem Text="Xem điểm theo lớp" NavigateUrl="HocSinh/XemDiemTheoLop.aspx" Value=""/>
+		<MenuItem Text="Xem điểm theo tên" NavigateUrl="HocSinh/XemDiemTheoten.aspx" Value=""/>
+	</MenuItem>
+</Menu>
